@@ -32,14 +32,7 @@ import sphinx_rtd_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    "sphinx.ext.doctest",
-    "sphinx.ext.todo",
-    "sphinx.ext.ifconfig",
-    "breathe",
-    "exhale",
-    "myst_parser",
-]
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -162,7 +155,7 @@ html_css_files = ["css/custom.css"]
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
-# html_extra_path = []
+html_extra_path = ["html"]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -302,29 +295,6 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
 
-# Breathe configuration
-breathe_projects = {"libtcod": "doxyxml/"}
-breathe_default_project = "libtcod"
-breathe_show_include = True
-
-# Setup the exhale extension
-exhale_args = {
-    # These arguments are required
-    "containmentFolder": "./library",
-    "rootFileName": "library_root.rst",
-    "doxygenStripFromPath": "../src",
-    # Heavily encouraged optional argument (see docs)
-    "rootFileTitle": "Library API",
-    # Suggested optional arguments
-    "createTreeView": True,
-    # TIP: if using the sphinx-bootstrap-theme, you need
-    # "treeViewIsBootstrap": True,
-    "exhaleExecutesDoxygen": True,
-    "exhaleUseDoxyfile": True,
-    # Other arguments
-    "unabridgedOrphanKinds": {"dir", "file", "page", "variable"},
-}
-
 
 def run_doxygen(app: sphinx.application.Sphinx) -> None:
     """Runs the doxygen command."""
@@ -342,4 +312,4 @@ def run_doxygen(app: sphinx.application.Sphinx) -> None:
 def setup(app: sphinx.application.Sphinx) -> None:
 
     # Add hook for building doxygen xml when needed
-    pass  # app.connect("builder-inited", run_doxygen)
+    app.connect("builder-inited", run_doxygen)
