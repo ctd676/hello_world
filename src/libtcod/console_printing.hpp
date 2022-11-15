@@ -45,6 +45,8 @@
 
 namespace tcod {
 #ifndef TCOD_NO_UNICODE
+/// @addtogroup PrintUTF8
+/// @{
 /*****************************************************************************
     @brief Print a string to a console.
 
@@ -160,6 +162,7 @@ inline int get_height_rect(int width, std::string_view str) {
   check_throw_error(TCOD_console_printn_frame(
       &console, rect.at(0), rect.at(1), rect.at(2), rect.at(3), title.size(), title.data(), fg, bg, flag, clear));
 }
+/// @}
 #endif  // TCOD_NO_UNICODE
 /*****************************************************************************
     @brief Return a formatted string as a std::string object.
