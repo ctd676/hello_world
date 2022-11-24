@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file fov.hpp
+/// Field-of-view module.
 // clang-format off
 #ifndef _TCOD_FOV_HPP
 #define _TCOD_FOV_HPP

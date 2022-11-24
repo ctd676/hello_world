@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file bresenham.hpp
+/// Bresenham line module.
 #ifndef _TCOD_BRESENHAM_HPP
 #define _TCOD_BRESENHAM_HPP
 

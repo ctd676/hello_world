@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file noise_defaults.h
+/// Noise default parameters.
 #ifndef _TCOD_NOISE_DEFAULTS
 #define _TCOD_NOISE_DEFAULTS
 

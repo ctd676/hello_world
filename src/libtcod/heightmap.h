@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file heightmap.h
+/// Terrain heightmap module.
 #ifndef _TCOD_HEIGHTMAP_H
 #define _TCOD_HEIGHTMAP_H
 

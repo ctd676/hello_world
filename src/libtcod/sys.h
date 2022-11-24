@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file sys.h
+/// Deprecated low-level functions.
 #ifndef _TCOD_SYS_H
 #define _TCOD_SYS_H
 
@@ -173,7 +175,7 @@ TCODLIB_API void TCOD_sys_sleep_milli(uint32_t val);
     \rst
     .. deprecated:: 1.19
         This function will not affect libtcod contexts.
-        Set the framerate with :any:`tcod::Timer` instead.
+        Set the framerate with tcod::Timer instead.
     \endrst
  */
 TCOD_DEPRECATED("This function is not compatible with contexts.  Use tcod::Timer or SDL timing functions instead.")
@@ -184,7 +186,7 @@ TCODLIB_API void TCOD_sys_set_fps(int val);
     \rst
     .. deprecated:: 1.19
         This function will not work with libtcod contexts.
-        Use :any:`tcod::Timer` instead.
+        Use tcod::Timer instead.
     \endrst
  */
 TCOD_DEPRECATED("This function is not compatible with contexts.  Use tcod::Timer or SDL timing functions instead.")
@@ -195,7 +197,7 @@ TCODLIB_API int TCOD_sys_get_fps(void);
     \rst
     .. deprecated:: 1.19
         This function will not work with libtcod contexts.
-        Use :any:`tcod::Timer` instead.
+        Use tcod::Timer instead.
     \endrst
  */
 TCOD_DEPRECATED("This function is not compatible with contexts.  Use tcod::Timer or SDL timing functions instead.")

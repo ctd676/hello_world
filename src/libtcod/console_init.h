@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file console_init.h
+/// Deprecated root console initialization.
 #ifndef LIBTCOD_CONSOLE_INIT_H_
 #define LIBTCOD_CONSOLE_INIT_H_
 
@@ -157,7 +159,7 @@ TCOD_PUBLIC struct SDL_Renderer* TCOD_sys_get_sdl_renderer(void);
  *
  *  The function will only work for the SDL2/OPENGL2 renderers.
  *
- *  Unlike :any:`TCOD_console_flush` this will not present the display.
+ *  Unlike TCOD_console_flush this will not present the display.
  *  You will need to do that manually, likely with the SDL API.
  *
  *  Returns 0 on success, or a negative number on a failure such as the
@@ -166,7 +168,7 @@ TCOD_PUBLIC struct SDL_Renderer* TCOD_sys_get_sdl_renderer(void);
  *  .. versionadded:: 1.11
  *
  *  .. seealso::
- *      :any:`TCOD_sys_get_sdl_window` :any:`TCOD_sys_get_sdl_renderer`
+ *      TCOD_sys_get_sdl_window TCOD_sys_get_sdl_renderer
  *  \endrst
  */
 #endif  // NO_SDL

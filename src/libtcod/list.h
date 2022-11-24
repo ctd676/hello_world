@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file list.h
+/// Deprecated libtcod list module.
 #ifndef _TCOD_LIST_H
 #define _TCOD_LIST_H
 

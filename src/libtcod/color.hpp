@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file color.hpp
+/// Color handling module.
 #ifndef _TCOD_COLOR_HPP
 #define _TCOD_COLOR_HPP
 

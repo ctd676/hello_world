@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file path.hpp
+/// Libtcod A* and Dijkstra pathfinders.
 // clang-format off
 #ifndef _TCOD_PATH_HPP
 #define _TCOD_PATH_HPP

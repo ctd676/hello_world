@@ -30,3 +30,5 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 #include "libtcod.h"
+/// The libtcod namespace.
+namespace tcod {}

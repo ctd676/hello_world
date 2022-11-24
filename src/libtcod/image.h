@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file image.h
+/// Image handling module.
 #ifndef _TCOD_IMAGE_H
 #define _TCOD_IMAGE_H
 

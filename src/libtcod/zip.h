@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file zip.h
+/// Deprecated serialization and compression module.
 #ifndef _TCOD_ZIP_H
 #define _TCOD_ZIP_H
 #ifndef TCOD_NO_ZLIB

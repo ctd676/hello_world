@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file portability.h
+/// Miscellaneous tools needed across platforms.
 #ifndef LIBTCOD_PORTABILITY_H
 #define LIBTCOD_PORTABILITY_H
 #include "config.h"

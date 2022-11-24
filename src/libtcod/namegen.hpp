@@ -34,7 +34,8 @@
 * Mingos' NameGen
 * This file was written by Dominik "Mingos" Marczuk.
 */
-
+/// @file namegen.hpp
+/// Name generator module.
 #ifndef _TCOD_NAMEGEN_HPP
 #define _TCOD_NAMEGEN_HPP
 

@@ -29,11 +29,10 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file utility.h
+/// Common C macro definitons.
 #ifndef LIBTCOD_UTILITY_H
 #define LIBTCOD_UTILITY_H
-/******************************************
- utility macros
- ******************************************/
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 #define ABS(a) ((a) < 0 ? -(a) : (a))

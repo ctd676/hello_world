@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file txtfield.h
+/// Text pad interface.
 #ifndef _TCOD_TEXT_H_
 #define _TCOD_TEXT_H_
 

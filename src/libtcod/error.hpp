@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file error.hpp
+/// Error handling module.
 #ifndef LIBTCOD_ERROR_HPP_
 #define LIBTCOD_ERROR_HPP_
 

@@ -29,12 +29,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-// clang-format off
+/// @file tree.hpp
+/// Internal tree container.
 #ifndef _TCOD_TREE_HPP
 #define _TCOD_TREE_HPP
 
 #include "tree.h"
 
+// clang-format off
 class TCODLIB_API TCODTree {
 public :
 	TCODTree *next = nullptr;

@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file path.h
+/// Libtcod A* and Dijkstra pathfinders.
 #ifndef _TCOD_PATH_H
 #define _TCOD_PATH_H
 

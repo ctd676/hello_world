@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file mouse.h
+/// Deprecated mouse functions.
 #ifndef _TCOD_MOUSE_H
 #define _TCOD_MOUSE_H
 

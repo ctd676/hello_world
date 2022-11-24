@@ -29,6 +29,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+/// @file bsp.h
+/// Binary space partitioning module.
 #ifndef _TCOD_BSP_H
 #define _TCOD_BSP_H
 
