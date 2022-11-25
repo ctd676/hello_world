@@ -22,6 +22,7 @@ Versions since `1.7.0` only track ABI breaks and not API breaks.
 ### Fixed
 - Constructing `TCODConsole` from `tcod::ConsolePtr` no longer causes a bad free.
 - Fixed memory leak when loading images with `TCODZip`.
+- Fixed out-of-bounds memory access in `TCODList::reverse` and `TCODList` copy methods.
 
 ## [1.23.1] - 2022-11-09
 ### Changed
