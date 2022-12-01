@@ -36,6 +36,8 @@
 
 #include "portability.h"
 
+/// @defgroup Bresenham Bresenham lines
+/// @{
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -86,4 +88,5 @@ TCODLIB_API bool TCOD_line_mt(
 #ifdef __cplusplus
 }  // extern "C"
 #endif  // __cplusplus
+/// @}
 #endif  // _TCOD_BRESENHAM_H
