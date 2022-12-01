@@ -37,7 +37,8 @@
 #include "fov_types.h"
 #include "list.h"
 #include "portability.h"
-
+/// @defgroup Pathfinding Pathfinding (C)
+/// @{
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -92,4 +93,5 @@ TCODLIB_API void TCOD_dijkstra_delete(TCOD_dijkstra_t dijkstra);
 #ifdef __cplusplus
 }
 #endif
+/// @}
 #endif
