@@ -42,6 +42,8 @@
 #include "console_types.hpp"
 
 namespace tcod {
+/// @addtogroup Console_CPP
+/// @{
 /**
     @brief Load an array of consoles from a REXPaint file.
 
@@ -75,6 +77,7 @@ inline void save_xp(
   tcod::check_throw_error(
       TCOD_save_xp(static_cast<int>(consoles.size()), consoles.data(), path.string().c_str(), compress_level));
 }
+/// @}
 }  // namespace tcod
 #endif  // TCOD_NO_ZLIB
 #endif  // TCOD_CONSOLE_REXPAINT_HPP_
