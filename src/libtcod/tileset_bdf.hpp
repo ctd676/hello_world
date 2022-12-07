@@ -41,7 +41,7 @@
 #include "tileset_bdf.h"
 
 namespace tcod {
-/// @addtogroup BDF
+/// @addtogroup Tileset_CPP
 /// @{
 /**
     Load a Tileset from a BDF font file.

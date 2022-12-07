@@ -40,7 +40,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif  // __cplusplus
-/// @addtogroup BDF
+/// @addtogroup Tileset
 /// @{
 /**
     Load a BDF font from a file path.
