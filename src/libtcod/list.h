@@ -39,6 +39,9 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+/// @defgroup List List objects
+/// Deprecated libtcod lists for use when required by older functions.
+/// @{
 /***************************************************************************
     @brief Libtcod's generic container, deprecated in favor of more standard tools.
 
@@ -95,4 +98,5 @@ TCODLIB_API bool TCOD_list_is_empty(TCOD_List* l);
 #ifdef __cplusplus
 }
 #endif
+/// @}
 #endif
