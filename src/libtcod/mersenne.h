@@ -37,6 +37,8 @@
 #include "mersenne_types.h"
 #include "portability.h"
 
+/// @defgroup Random Random number generators
+/// @{
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -63,4 +65,5 @@ TCODLIB_API int TCOD_random_dice_roll_s(TCOD_Random* mersenne, const char* s);
 #ifdef __cplusplus
 }
 #endif
+/// @}
 #endif

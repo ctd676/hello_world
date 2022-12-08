@@ -37,6 +37,9 @@
 
 #include "config.h"
 
+/// @addtogroup Random
+/// @{
+
 /* dice roll */
 typedef struct {
   int nb_rolls;
@@ -87,5 +90,5 @@ typedef union TCOD_Random {
 
 TCOD_DEPRECATED("This type hides indirection.  Use TCOD_Random* instead.")
 typedef union TCOD_Random* TCOD_random_t;
-
+/// @}
 #endif /* _TCOD_RANDOM_TYPES_H */
