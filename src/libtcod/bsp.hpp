@@ -42,6 +42,9 @@
 #include "mersenne.hpp"
 #include "tree.hpp"
 
+/// @addtogroup BSP
+/// @{
+
 class TCODBsp;
 
 class TCODLIB_API ITCODBspCallback {
@@ -426,5 +429,5 @@ protected :
 	TCODBsp(TCODBsp *father, bool left);
 
 };
-
+/// @}
 #endif
