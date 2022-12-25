@@ -1,10 +1,31 @@
 cmake_minimum_required (VERSION 3.13...3.21)
+include(FetchContent)
 
 target_compile_features(${PROJECT_NAME} PUBLIC c_std_99 cxx_std_17)
 set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD 99)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 set_property(TARGET ${PROJECT_NAME} PROPERTY C_STANDARD_REQUIRED TRUE)
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD_REQUIRED TRUE)
+
+
+FetchContent_Declare(
+    SDL2
+    GIT_REPOSITORY https://github.com/libsdl-org/SDL
+    GIT_TAG release-2.26.1
+    FIND_PACKAGE_ARGS CONFIG
+)
+FetchContent_Declare(
+    UTF8PROC
+    GIT_REPOSITORY https://github.com/JuliaStrings/utf8proc
+    GIT_TAG v2.8.0
+    FIND_PACKAGE_ARGS CONFIG
+)
+FetchContent_Declare(
+    ZLIB
+    GIT_REPOSITORY https://github.com/madler/zlib
+    GIT_TAG v1.2.13
+    FIND_PACKAGE_ARGS
+)
 
 set(LIBTCOD_THREADS ON CACHE BOOL "If true then older thread functions are enabled by libtcod.")
 set(LIBTCOD_SDL2 "find_package" CACHE STRING "How this library will be linked.")
@@ -35,7 +56,7 @@ endif()
 set_property(CACHE LIBTCOD_SDL2 PROPERTY STRINGS "find_package" "conan" "disable")
 if(LIBTCOD_SDL2 STREQUAL "find_package")
     list(APPEND VCPKG_MANIFEST_FEATURES "sdl")
-    find_package(SDL2 CONFIG REQUIRED)
+    FetchContent_MakeAvailable(SDL2)
     target_link_libraries(${PROJECT_NAME} PUBLIC SDL2::SDL2)
 elseif(LIBTCOD_SDL2 STREQUAL "conan")
     target_link_libraries(${PROJECT_NAME} PUBLIC CONAN_PKG::sdl2)
@@ -47,7 +68,7 @@ endif()
 
 set_property(CACHE LIBTCOD_ZLIB PROPERTY STRINGS "find_package" "conan" "disable")
 if(LIBTCOD_ZLIB STREQUAL "find_package")
-    find_package(ZLIB REQUIRED)
+    FetchContent_MakeAvailable(ZLIB)
     target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
 elseif(LIBTCOD_ZLIB STREQUAL "conan")
     target_link_libraries(${PROJECT_NAME} PRIVATE CONAN_PKG::zlib)
@@ -71,13 +92,16 @@ else()
     message(FATAL_ERROR "Unknown option for LIBTCOD_LODEPNG: '${LIBTCOD_LODEPNG}'")
 endif()
 
-set_property(CACHE LIBTCOD_UTF8PROC PROPERTY STRINGS "vendored" "vcpkg" "disable")
+set_property(CACHE LIBTCOD_UTF8PROC PROPERTY STRINGS "vendored" "vcpkg" "find_package" "disable")
 if(LIBTCOD_UTF8PROC STREQUAL "vendored")
     message("Will be vendored: utf8proc")
     target_include_directories(${PROJECT_NAME} PRIVATE "vendor/utf8proc")
     target_sources(${PROJECT_NAME} PRIVATE "vendor/utf8proc/utf8proc.c")
 elseif (LIBTCOD_UTF8PROC STREQUAL "vcpkg")
     find_package(unofficial-utf8proc CONFIG REQUIRED)
+    target_link_libraries(${PROJECT_NAME} PRIVATE utf8proc)
+elseif (LIBTCOD_UTF8PROC STREQUAL "find_package")
+    FetchContent_MakeAvailable(utf8proc)
     target_link_libraries(${PROJECT_NAME} PRIVATE utf8proc)
 elseif(LIBTCOD_UTF8PROC STREQUAL "disable")
     target_compile_definitions(${PROJECT_NAME} PUBLIC TCOD_NO_UNICODE)
